@@ -1,0 +1,199 @@
+html{
+	box-sizing: BORDER-BOX;
+}
+
+body{
+
+	background: #7A419B;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	min-height: 100vh;
+	background: linear-gradient(133dh, #7c1599 0%, #921099 48%, #7e4ae9 100%);
+	background-size: cover;
+	align-items: center;
+	justify-content: center;
+}
+
+.player{
+	max-height: 759px;
+	border: 15px solid rgba(0,0,0,.2);
+	box-shadow: 0 0 20px rgba(0, 0, 0,.2);
+	position: relative;
+	font-size: 0;
+	overflow: hidden;
+}
+
+.player{
+	width: 100%;
+}
+
+.player_My_Video{
+	width: 100%;
+}
+
+.player_My_controls{
+	display: flex;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	transform: translateY(100%) translateY(-5px);
+	transition: all .3s;
+	flex-wrap: wrap;
+	background: rgba(0, 0, 0,.2);
+}
+.player:hover .player_My_controls{
+	transform: translateY(0);
+}
+
+.player_My_controls >*{
+	flex: 1;
+}
+
+
+.progress{
+	flex: 10;
+	position: relative;
+	display: flex;
+	flex-basis: 100%;
+	height: 5px;
+	transition: height .3s;
+	background: rgba(0, 0, 0,.5);
+	cursor: pointer; /* ew-resize */
+}
+
+.progress_My_filled{
+	width: 50%;
+	background: #ffc600;
+	flex: 0;
+	flex-basis: 0%;
+}
+
+.player_My_button{
+	background: none;
+	border: 0;
+	line-height: 1;
+	color: gold;
+	text-align: center;
+	outline: 0;
+	padding: 10px 15px 10px 15px;
+	cursor: pointer;
+	max-width: 50px;
+}
+
+.playerSlider{
+	display: block;
+	width: 10px;
+	height: 30px;
+}
+
+/*estilizar com css o input="range"*/
+
+input[type=range]{
+	-webkit-appearance:none !important;
+	background: transparent;
+	width: 100px;
+	margin: 0 5px;
+}
+
+input[type=range]::-webkit-slider-runnable-track{
+	width: 100px;
+	height: 2px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0), 0 0 1px rgba(13, 13, 13, 0);
+	background: rgba(25,25,25,.8);
+	border-radius: 1.3px;
+	border: 0.2px solid rgba(1,1,1,0);
+}
+
+input[type=range]::-webkit-slider-thumbr{
+	height: 10px;
+	width: 10px;
+	border-radius: 50px;
+	background: #fff;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -4px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, .2);
+}
+
+input [type=range]:focus{
+	outline: none;
+}
+
+input[type=range]: focus::-webkit-slider-runnable-track{
+	background: #ff0;
+}
+
+input[type=range]::-moz-range-track{
+	width: 100px;
+	height: 0.1px;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0), 0 0 1px rgba(13, 13, 13, 0);
+	background: #fff
+	border-radius: 1.3px;
+	border: 0.2px solid rgba(1,1,1,0);
+}
+
+  /*circoço de folume*/
+
+input[type=range]::-moz-range-thumbr{
+	height: 10px;
+	width: 10px;
+	border-radius: 50px;
+	border-color: none;
+	background: #fff;
+	cursor: pointer;
+}
+
+.VideoTime{
+	display: block;
+	width: 10px;
+	cursor: default;
+	font-size: 10px;
+	color: #fff;
+	margin-top: 11px;
+}
+
+.player:fullscreen{
+	max-width: none;
+	width: 100%;
+}
+
+.fullscreenbtn{
+	background: none;
+	border: 0;
+	line-height: 1;
+	color: white;
+	text-align: center;
+	outline: 0;
+	cursor: pointer;
+	max-width: 50px;
+	margin-top: -3px;
+}
+
+.fullscreenbtn span{
+	width: 15px;
+	height: auto;
+	cursor: pointer;
+	font-size: 20px;
+	color: gold;
+}
+
+.fullscreenbtnimg span:hover{
+	width: 16px;
+	height: auto;
+}
+
+video{
+	width: 100%;
+}
+
+@media only screen and (min-width:  150px) and (max-width: 780px){
+.player{
+
+	width: 100%;
+}	
+}
+
+

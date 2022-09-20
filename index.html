@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="utf-8">
+    <title>Player</title>
+    <link rel="shortcut icon" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="./mousestop.js"></script>
+
+</head>
+<body>
+
+    <content class="player" onmousemove="myFunction(event)" onmouseout="clearCoor()">
+        <video class="player_My_Video viewer" src="videos/20220914_100457" type = "video"></video>
+
+        <nav class="player_My_controls">
+
+            <div class="progress">
+                <div class="progress_My_filled"></div>
+            </div>
+
+            <button class="player_My_button toggle" title="Toggle player"></button>
+            <input type="range" name="volume" class="playerSlider" min="0" max="1" step="0.001" value="0.20">
+
+            <!--VideoTime-->
+
+            <div class="VideoTime">00:00:00 / 00:00:00</div>
+            <input type="range" name="playerbackRate" class="playerSlider" min="0.5" max="2" step="0.001" value="1">
+
+            <button data-skip="-10" class="player_My_button">-10s</button>
+            <button data-skip="10" class="player_My_button">+10s</button>
+            <button class="fullscreenbtn"><span>▅</span></button>
+
+        </nav>
+    </content>
+           <script src="css/javascripts.js"></script>
+
+           <script type="text/javascript" src="js/main.js"></script>
+
+           $('.player').mousestop(function(){
+            $(".player_My_controls").hide();
+           });
+
+           $('.player').mousestop(function(){
+            $(".player_My_controls").show();
+           });
+</body>
+
+</html>
